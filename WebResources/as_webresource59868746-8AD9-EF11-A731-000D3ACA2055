@@ -1,0 +1,23 @@
+function openEntityFormInInsertMode() {
+    var entityFormOptions = {
+        entityName: "contact",  // Replace with the logical name of the entity you want to create
+    };
+ 
+    var formParameters = {
+        // Optional: You can pass parameters to prepopulate certain fields if required
+        // Example: "fullname": "John Doe"
+    };
+ 
+    Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
+        function (success) {
+            // Success logic, you can do something if the form opens successfully
+            console.log("Form opened successfully");
+        },
+        function (error) {
+            // Error handling, log the error if the form fails to open
+            console.log("Error opening form: " + error.message);
+        }
+    );
+}
+
+has context menu
